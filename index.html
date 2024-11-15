@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Pasindu Mihiranga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Entrepreneur</p>
+            <h1>Hi, I'm <span>Pasindu</span><br>Mihiranga From<br>Sri Lanka</h1>
+        </div>
+    </div>
+</div>
+<!-----------------------------------------------------about---------------------------------------------------->
+<div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I’m Pasindu Mihiranga, an Information Technology undergraduate specializing in Data Science at SLTC Research University, based in Sri Lanka. I founded Wee Tech Solutions, where we offer computer and mobile repairs, a variety of tech accessories, and house planning services to help clients create functional, tech-enhanced spaces. With a focus on quality and customer satisfaction, I’m here to meet your tech and planning needs.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2024-present</span><br>Undergraduate Data Science at SLTC Research University</li>
+                            <li><span>2024</span><br>Diploma in Computer Hardware With Network at VTC</li>
+                            <li><span>2023</span><br>Cetificate in Programming With Python</li>
+                            <li><span>2023</span><br>Cetificate in House Planning</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Repairs</span><br>Repairing Computer and Mobile hardware and software.</li>
+                            <li><span>Design</span><br>Designing creative house and building plans.</li>
+                            <li><span>Computer literacy</span></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------------------------------services----------------------------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Selling</h2>
+                <p>We offer a wide range of high-quality computer and mobile accessories to enhance your tech experience.Our accessories come with a warranty, giving you peace of mind with every purchase.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Repairing</h2>
+                <p>We providing top-notch computer & mobile phones repair services, both hardware & software and have many experiences.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Planning</h2>
+                <p>We provide personalized house planning services to help you create functional and aesthetically pleasing spaces.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------------------------------portfolio----------------------------------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work--1.png" >
+                <div class="layer">
+                    <h3>Repair Hardware</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" >
+                <div class="layer">
+                    <h3>Sell Accessories</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" >
+                <div class="layer">
+                    <h3>House Plans</h3>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-------------------------------------------------------contact----------------------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>pasindu321mihiranga@gmail.com</p>
+                <p>wtechcomputers3@gmail.com</p>
+                <p>0704611797</p>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Pasindu - Made wtih by Pasindu Mihiranga/ WeeTech</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+</body>
+</html>
